@@ -1,0 +1,12 @@
+<div class="search-div" [ngClass]="{changebackground:entersearchValue!=''}">
+    <label for="#searchbar">search:</label>
+    <!-- below we use 1 way biniding where we used event binding -->
+    <!-- <input type="text" (input)="changeSearchValue($event)"> <br> <br> -->
+
+    <!-- below we are using 2 way binding where we used @ngModel -->
+
+    <input type="text" [(ngModel)]="entersearchValue" (input)="onsearchtextchanged()"> <br> <br>
+    <span class="result" *ngIf="entersearchValue!=''">Your Searched Result:{{entersearchValue}}</span>
+
+
+</div>

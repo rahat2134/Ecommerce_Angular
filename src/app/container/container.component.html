@@ -1,0 +1,11 @@
+<!-- <p>container works!</p>
+<button (click)="onButtonClick()">Click me!</button>
+ -->
+ <!-- add a nav bar -->
+ <div class="wrapper" *ngIf="searchText===''||searchText">
+    <app-nav></app-nav>
+    <app-header></app-header>
+    <app-search (searchtextchanged)="onSearchTextEntered($event)"></app-search>
+    <app-products></app-products>
+ </div>
+ <app-notification></app-notification>
